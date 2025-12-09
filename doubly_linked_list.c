@@ -80,7 +80,7 @@ void display() {
         printf("%d ", temp->data);
         temp = temp->next;
     }
-    printf("\n");
+    
 }
 
 int main() {
@@ -96,6 +96,7 @@ int main() {
 
     return 0;
 }
+
 
 
 
