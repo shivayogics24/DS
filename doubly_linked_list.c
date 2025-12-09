@@ -19,7 +19,7 @@ struct node* createNode(int value) {
 void insertLeft(int value, int pos) {
     struct node *newNode = createNode(value);
 
-    // Insert at head
+    
     if (pos == 1) {
         newNode->next = head;
         if (head != NULL)
@@ -96,5 +96,6 @@ int main() {
 
     return 0;
 }
+
 
 
