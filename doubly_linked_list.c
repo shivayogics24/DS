@@ -29,18 +29,14 @@ void insertLeft(int value, int pos) {
     }
 
     struct node *temp = head;
-
-    // Move to position-1
     for (int i = 1; i < pos - 1 && temp != NULL; i++) {
         temp = temp->next;
     }
-
     if (temp == NULL) {
         printf("Position out of range\n");
         free(newNode);
         return;
     }
-
     newNode->next = temp->next;
     newNode->prev = temp;
 
@@ -55,7 +51,6 @@ void deleteNode(int value) {
         printf("List is empty\n");
         return;
     }
-
     struct node *temp = head;
 
     if (temp->data == value) {
@@ -74,14 +69,11 @@ void deleteNode(int value) {
         printf("Value not found\n");
         return;
     }
-
     temp->prev->next = temp->next;
     if (temp->next != NULL)
         temp->next->prev = temp->prev;
-
     free(temp);
 }
-
 void display() {
     struct node* temp = head;
     while (temp != NULL) {
@@ -104,4 +96,5 @@ int main() {
 
     return 0;
 }
+
 
